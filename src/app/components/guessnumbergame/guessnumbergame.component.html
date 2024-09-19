@@ -1,0 +1,9 @@
+<div>
+    <h2>Guess the Number Game</h2>
+    <p>Guess a number between 1 and 100:</p>
+    <input type="number" [(ngModel)]="guess" placeholder="Enter your guess" />
+    <button (click)="checkGuess()">Check Guess</button>
+  
+    <p>{{ message }}</p>
+  </div>
+  
