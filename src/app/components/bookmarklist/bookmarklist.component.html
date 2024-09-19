@@ -1,0 +1,12 @@
+<div>
+    <input type="url" [(ngModel)]="url" placeholder="Enter a URL">
+    <button (click)="addBookmark()">Add Bookmark</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let bookmark of bookmarks; let i = index">
+      <a [href]="bookmark" target="_blank">{{ bookmark }}</a>
+      <button (click)="removeBookmark(i)">Remove</button>
+    </li>
+  </ul>
+  
