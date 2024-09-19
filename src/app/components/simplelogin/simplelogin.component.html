@@ -1,0 +1,14 @@
+<div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" placeholder="Enter your email">
+  </div>
+  
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" placeholder="Enter your password">
+  </div>
+  
+  <button (click)="onLogin()">Login</button>
+  
+  <p *ngIf="loginMessage">{{ loginMessage }}</p>
+  
