@@ -1,0 +1,13 @@
+<div>
+    <h2>To-Do Manager</h2>
+    <input type="text" [(ngModel)]="task" placeholder="Enter a task" />
+    <button (click)="addTask()">Add Task</button>
+  
+    <ul>
+      <li *ngFor="let item of todoList; let i = index">
+        {{ item }} 
+        <button (click)="removeTask(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  
