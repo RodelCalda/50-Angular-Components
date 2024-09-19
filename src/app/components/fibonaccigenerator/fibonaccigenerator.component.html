@@ -1,0 +1,16 @@
+<div>
+    <h2>Fibonacci Generator</h2>
+  
+    <label for="numberOfTerms">Enter number of Fibonacci terms:</label>
+    <input type="number" id="numberOfTerms" [(ngModel)]="numberOfTerms" placeholder="Enter a number">
+    
+    <button (click)="generateFibonacci()">Generate Fibonacci</button>
+  
+    <div *ngIf="fibonacciSeries.length > 0">
+      <h3>Fibonacci Series:</h3>
+      <ul>
+        <li *ngFor="let number of fibonacciSeries">{{ number }}</li>
+      </ul>
+    </div>
+  </div>
+  
