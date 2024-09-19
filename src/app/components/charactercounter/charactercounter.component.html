@@ -1,0 +1,7 @@
+<div>
+    <label for="inputText">Enter a string:</label>
+    <input type="text" id="inputText" [(ngModel)]="inputText" (input)="updateCharCount()" placeholder="Type something...">
+  </div>
+  
+  <p>Character Count: {{ charCount }}</p>
+  
