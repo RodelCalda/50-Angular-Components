@@ -1,0 +1,16 @@
+<div>
+    <h3>Mood Tracker</h3>
+    <select [(ngModel)]="selectedMood">
+      <option value="" disabled>Select your mood</option>
+      <option *ngFor="let mood of moods" [value]="mood">{{ mood }}</option>
+    </select>
+    <button (click)="submitMood()">Submit</button>
+  
+    <h4>Mood History:</h4>
+    <ul>
+      <li *ngFor="let entry of moodHistory">
+        {{ entry.mood }} - {{ entry.date }}
+      </li>
+    </ul>
+  </div>
+  
