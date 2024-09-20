@@ -1,0 +1,17 @@
+<div>
+    <h3>Select a Color:</h3>
+    <div *ngFor="let color of colors" 
+         (click)="selectColor(color)" 
+         [style.backgroundColor]="color.toLowerCase()" 
+         class="color-box">
+      {{ color }}
+    </div>
+  
+    <h4 *ngIf="selectedColor">Selected Color: {{ selectedColor }}</h4>
+    <div *ngIf="selectedColor" 
+         [style.backgroundColor]="selectedColor.toLowerCase()" 
+         class="selected-color-sample">
+      Sample
+    </div>
+  </div>
+  
