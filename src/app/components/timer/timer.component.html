@@ -1,0 +1,13 @@
+<div>
+    <label for="time">Set Time (seconds):</label>
+    <input type="number" id="time" [(ngModel)]="time" placeholder="Enter time in seconds">
+  
+    <button (click)="startTimer()">Start</button>
+    <button (click)="stopTimer()">Pause</button>
+    <button (click)="resetTimer()">Reset</button>
+    
+    <p *ngIf="isCounting || remainingTime > 0">
+      Time Remaining: {{ remainingTime }} seconds
+    </p>
+  </div>
+  
